@@ -3013,4 +3013,26 @@ insertion.c:28: error: expected ';' before 'break'
 ~/Dropbox/UNICAMP/S8/MC458/LAB01 $ gcc insertion.c -o insertion
 ~/Dropbox/UNICAMP/S8/MC458/LAB01 $ ./insertion 9 8 7 6 5 4 3 2 1
 1,2,3,4,5,6,7,8,9
+~/Dropbox/UNICAMP/S8/MC458/LAB01 $ git commit -am "conserto do insertionsort.."
+[master f76aa80] conserto do insertionsort..
+ 3 files changed, 48 insertions(+), 10 deletions(-)
+~/Dropbox/UNICAMP/S8/MC458/LAB01 $ git pull
+Already up-to-date.
+~/Dropbox/UNICAMP/S8/MC458/LAB01 $ git push
+Username for 'https://github.com': pereirfe
+Password for 'https://pereirfe@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.86 KiB, done.
+Total 5 (delta 4), reused 0 (delta 0)
+To https://github.com/pereirfe/458Lab1
+   136007f..f76aa80  master -> master
+~/Dropbox/UNICAMP/S8/MC458/LAB01 $ ./timer "insertion 9 8 7 6 5 4 3 2 1"
+1,2,3,4,5,6,7,8,9
+0.000225
+~/Dropbox/UNICAMP/S8/MC458/LAB01 $ rm a.txt
+~/Dropbox/UNICAMP/S8/MC458/LAB01 $ ls
+README.md  bubble    genvect.sh  insertion    numgen    sort.h  timer.cpp
+a          bubble.c  git         insertion.c  numgen.c  timer   
 ~/Dropbox/UNICAMP/S8/MC458/LAB01 $ 
