@@ -24,7 +24,7 @@ int main(int argc, char* argv[] ) {
   srand(time(0));
 
   for(i=0; i<size; i++){
-    printf("%d,", rand()%MAX);
+    printf("%d ", rand()%MAX);
   }
   printf("\b\n");
 }
