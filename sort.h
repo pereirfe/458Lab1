@@ -5,6 +5,6 @@
 #define SORT_H
 
 #define SWAP(x,y,buffer) do{ (buffer)=(x); (x)=(y); (y)=(buffer); }while(0); 
-#define MAX_IND(x,y) ((x)>(y)?1:0)
+#define MAX_IND(v,x,y) ((v[x])>(v[y])?(x):(y))
 
 #endif
