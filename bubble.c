@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "sort.h"
 
+//#define DEBUG
+
 int main(int argc, char** argv){
   int i, buffer;
   char flag;
@@ -22,11 +24,14 @@ int main(int argc, char** argv){
       }
     }
   }while(flag);
+
   
+#ifdef DEBUG
   for(i=0; i<size; i++){
     printf("%d,", v[i]);
   }
+  printf("\b\n"); 
+#endif
 
-  printf("\b\n");
   return 0;
 }

@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "sort.h"
 
+//#define DEBUG 0
+
 int main(int argc, char** argv){
   int i, j, buffer;
   int cand; // candidate
@@ -25,10 +27,12 @@ int main(int argc, char** argv){
     SWAP(v[i], v[cand], buffer);
   }
 
+#ifdef DEBUG
   for(i=0; i<size; i++){
     printf("%d,", v[i]);
   }
-
-  printf("\b\n");
+  puts("\b");
+#endif
+  
   return 0;
 }
