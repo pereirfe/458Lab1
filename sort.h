@@ -1,7 +1,6 @@
 /* sort.h: Define some functions and constants for sorting */
 /* By Fernando Pereira */
 
-
 #ifndef SORT_H
 #define SORT_H
 

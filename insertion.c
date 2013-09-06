@@ -1,28 +1,30 @@
-/* BubbleSort */
+/* InsertionSort */
 #include <stdio.h>
 #include <stdlib.h>
 #include "sort.h"
 
 int main(int argc, char** argv){
-  int i, buffer;
+  int i, j, buffer;
+  int cand; // candidate
   char flag;
   int size = argc-1;
   int* v = (int*)malloc(sizeof(int)*size);
   
+
   for(i=0; i<size; i++){
     v[i] = atoi(argv[i+1]);
   }
   
-  do{
-    flag = 0;
-    for(i=1; i<size; i++){
-      if( v[i-1] > v[i] ){
-	SWAP(v[i-1],v[i],buffer);
-	flag=1;
+  for(i=0; i<size; i++){
+    cand = i;
+    for(j=i; j<size; j++){
+      if( v[j] < v[cand] ){
+	cand = j;
       }
     }
-  }while(flag);
-  
+    SWAP(v[i], v[cand], buffer);
+  }
+
   for(i=0; i<size; i++){
     printf("%d,", v[i]);
   }
