@@ -14,31 +14,34 @@ void restore(int v[], int root, int size){
   int sonL, sonR, buffer;
   int newr, maxi;
 
-  if(root > size) return;
-  sonL = SON_L(root);
-  sonR = SON_R(root);
+  do{
+    if(root > size) return;
+    sonL = SON_L(root);
+    sonR = SON_R(root);
 
-  if(sonL > size) return;  //no childs
+    if(sonL > size) return;  //no childs
 
-  if(sonR > size){ // lado esquerdo, apenas
-    if(v[sonL] < v[root]){
-      return;
-    }
+    if(sonR > size){ // lado esquerdo, apenas
+      if(v[sonL] < v[root]){
+	return;
+      }
 
-    SWAP(v[sonL], v[root], buffer);
-    newr = sonL;  
+      SWAP(v[sonL], v[root], buffer);
+      newr = sonL;  
   
-  } else {
-    maxi = MAX_IND(v,sonL,sonR);
+    } else {
+      maxi = MAX_IND(v,sonL,sonR);
     
-    if(v[maxi] < v[root]) {
-      return;
-    } 
+      if(v[maxi] < v[root]) {
+	return;
+      } 
     
-    SWAP(v[maxi],v[root],buffer);
-    newr=maxi;
-  }
-  restore(v, newr, size);
+      SWAP(v[maxi],v[root],buffer);
+      newr=maxi;
+    }
+    //restore(v, newr, size);
+
+  } while(1);
 }
 
 int main(int argc, char** argv){
