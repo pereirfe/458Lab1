@@ -9,7 +9,6 @@
 #define SON_L(x)  ((2*((x)+1))-1)
 #define SON_R(x)  ((2*((x)+1)))
 
-
 void restore(int v[], int root, int size){
   int sonL, sonR, buffer;
   int newr, maxi;
@@ -19,7 +18,7 @@ void restore(int v[], int root, int size){
     sonL = SON_L(root);
     sonR = SON_R(root);
 
-    if(sonL > size) return;  //no childs
+    if(sonL > size) return;  //sem filhos
 
     if(sonR > size){ // lado esquerdo, apenas
       if(v[sonL] < v[root]){
@@ -39,9 +38,7 @@ void restore(int v[], int root, int size){
       SWAP(v[maxi],v[root],buffer);
       newr=maxi;
     }
-    //restore(v, newr, size);
-
-  } while(1);
+  } while(1); // eliminaçao de recursao caudal
 }
 
 int main(int argc, char** argv){
