@@ -32,7 +32,6 @@ int main(int argc, char** argv){
 
   size = atoi(argv[1]);
   read(v,size);
-  if(0){
     do{
       flag = 0;
       for(i=1; i<size; i++){
@@ -42,7 +41,6 @@ int main(int argc, char** argv){
 	}
       }
     }while(flag);
-  }
   prt(v,size);
   return 0;
 }
