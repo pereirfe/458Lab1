@@ -1,4 +1,4 @@
-all: heaps quicks merges bubbles insertion timer verify
+all: heaps quicks merges bubbles insertion timer verify numgen
 
 heaps: heap.c sort.h
 	gcc heap.c sort.h -o heap
@@ -20,3 +20,6 @@ timer: timer.cpp
 
 verify: verify.c
 	gcc verify.c -o verify
+
+numgen: numgen.c
+	gcc numgen.c -o numgen

@@ -7,7 +7,7 @@ then
 
 else
     touch tmp.tmp
-    ./timer "$1 $2 < $3 > tmp.tmp" >> $4
+    ./timer "$1 $2 < $3 1> tmp.tmp" >> $4
     `./verify $2 < tmp.tmp`
     if [ $? -ne 0 ]
     then
