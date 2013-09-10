@@ -5,13 +5,26 @@
 
 #define DEBUG 0
 
+void read(int *a, int n) {
+  int i;
+  for(i = 0; i < n; i++)
+    scanf("%d",&a[i]);
+}
+
 int main(int argc, char** argv){
   int i, j, k, buffer;
   int aux; // candidate
   char flag;
-  int size = argc-1;
+  int size;
   int* v = (int*)malloc(sizeof(int)*size);
   
+  if( argc != 2 ){
+    fprintf(stderr, "Uso: ./bubble N");
+    exit(-1);
+  }
+
+  size = atoi(argv[1]);
+  read(v,size);
 
   for(i=0; i<size; i++){
     v[i] = atoi(argv[i+1]);

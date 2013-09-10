@@ -1,0 +1,1 @@
+1) como passar tamanho da entrada como parametro? ( na mao? )

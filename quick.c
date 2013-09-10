@@ -49,14 +49,21 @@ void quickSort(int *a, int l, int r) {
     }
 }
 
-int main(void) {
+int main(int argc, char** argv) {
 	int n;
-	scanf("%d",&n);
+
+	if( argc != 2 ){
+	  fprintf(stderr, "Uso: ./quick N");
+	  exit(-1);
+	}
+
+	n = atoi(argv[1]);
+
 	int *a;
 	a = alloc(n);
 	read(a,n);
 	quickSort(a,0,n-1);
-	print(a,n);
+	//print(a,n);
 	free(a);
 	return 0;
 }

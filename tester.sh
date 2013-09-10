@@ -1,16 +1,9 @@
 #!/bin/bash
 
-input=""
-algo="bubble "
+if [ $# -ne 3 ] 
+then
+    echo "Uso: bash tester $algo $tamanho $input"
 
-while read line
-do
-    input=$line
-    echo "line read!"
-done < "a.txt"
-
-#echo "${algo}${input}"
-
-time `./${algo}${input}`
-
-
+else
+    ./timer "$1 $2 < $3 > /dev/null"
+fi
