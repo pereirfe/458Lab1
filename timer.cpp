@@ -18,9 +18,9 @@ int main(int argc, char* argv[]) {
       fprintf(stderr, "TIMER: Algoritmo nao especificado\n");
       exit(-1);
     }
-    
-    a = a + argv[1];
         
+    a = a + argv[1];
+    
     ::gettimeofday(&tin, NULL);
     system(a.c_str());
     ::gettimeofday(&tf, NULL);
