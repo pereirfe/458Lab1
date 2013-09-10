@@ -1,26 +1,6 @@
-/**Sort a set of n numbers using quick sort**/
+/**Sort a set of n numbers using quick sort --not optmized**/
 #include <stdio.h>
 #include <stdlib.h>
-
-int *alloc(int n) {
-	int *a;
-	a = (int*)malloc(n*sizeof(int));
-	if (a == NULL) exit(1);
-	return a;
-}
-
-void read(int *a, int n) {
-	int i;
-	for(i = 0; i < n; i++)
-		scanf("%d",&a[i]);
-
-}
-
-void print(int *a, int n) {
-	int i;
-	for(i = 0; i < n; i++)
-		printf("%d\n",a[i]);
-}
 
 int partit(int *a, int l, int r) {
     int pivot = a[l];
@@ -50,7 +30,7 @@ void quickSort(int *a, int l, int r) {
 }
 
 int main(int argc, char** argv) {
-	int n;
+  int n, i;
 
 	if( argc != 2 ){
 	  fprintf(stderr, "Uso: ./quick N");
@@ -59,11 +39,14 @@ int main(int argc, char** argv) {
 
 	n = atoi(argv[1]);
 
-	int *a;
-	a = alloc(n);
+	int *a = (int*)malloc(sizeof(int)*n);
+	if (a == NULL) exit(1);
+
 	read(a,n);
 	quickSort(a,0,n-1);
-	//print(a,n);
+
+	for(i=0; i<n; i++)
+	  printf("%d\n",a[i]);
 	free(a);
 	return 0;
 }
