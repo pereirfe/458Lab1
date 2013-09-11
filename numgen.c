@@ -31,6 +31,7 @@ int main(int argc, char* argv[] ) {
   int size, i;
   char opt;
   int *v;
+  int max;
 
 
   if(argc != 3 ){
@@ -45,8 +46,10 @@ int main(int argc, char* argv[] ) {
 
   srand(time(0));
 
+  max = size>MAX? size:MAX;
+
   for(i=0; i<size; i++){
-    v[i] = rand()%MAX;
+    v[i] = rand()%max;
   }
   
   switch(opt){
