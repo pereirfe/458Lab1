@@ -45,8 +45,8 @@ int main(int argc, char** argv) {
   read(a,n);
   quickSort(a,0,n-1);
 
-  for(i=0; i<n; i++)
-    printf("%d\n",a[i]);
+  // for(i=0; i<n; i++)
+  //  printf("%d\n",a[i]);
   free(a);
   return 0;
 }

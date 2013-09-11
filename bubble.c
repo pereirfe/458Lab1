@@ -41,6 +41,6 @@ int main(int argc, char** argv){
 	}
       }
     }while(flag);
-  prt(v,size);
+    //prt(v,size);
   return 0;
 }

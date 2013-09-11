@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
     ::gettimeofday(&tf, NULL);
     
     t1 = tf.tv_sec+(tf.tv_usec/1000000.0) - tin.tv_sec+(tin.tv_usec/1000000.0);
-    std::cout<< t1 <<'\n';
+    std::cout<< t1;
     
     return 0;
 }
